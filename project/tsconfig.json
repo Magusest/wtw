@@ -1,5 +1,24 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": "./src",
+    "paths": {
+      "components": [
+        "./components",
+      ],
+      "hooks": [
+        "./hooks",
+      ],
+      "pages": [
+        "pages",
+      ],
+      "store": [
+        "store",
+      ],
+      "types": [
+        "types",
+      ],
+    },
     "target": "es2020",
     "lib": [
       "dom",
