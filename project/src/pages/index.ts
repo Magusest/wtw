@@ -4,3 +4,4 @@ export { default as MyList } from './my-list/my-list';
 export { default as Film } from './film/film';
 export { default as AddReview } from './add-review/add-review';
 export { default as Player } from './player/player';
+export { default as NotFound } from './not-fount-page/not-found-page';

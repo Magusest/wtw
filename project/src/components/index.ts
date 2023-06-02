@@ -1,2 +1,17 @@
 export { default as App } from './app/app';
 export { default as FilmCardSmall } from './film-card-small/film-card-small';
+export { default as FilmCardBg } from './film-card-bg/film-card-bg';
+export { default as FilmCardPoster } from './film-card-poster/film-card-poster';
+export { default as FilmCardTitle } from './film-card-title/film-card-title';
+export { default as FilmCardMeta } from './film-card-meta/film-card-meta';
+export { default as FilmCardButtons } from './film-card-buttons/film-card-buttons';
+export { default as Catalog } from './catalog/catalog';
+export { default as CatalogGenreList } from './catalog-genre-list/catalog-genre-list';
+export { default as CatalogFilmsList } from './catalog-films-list/catalog-films-list';
+export { default as CatalogMoreButton } from './catalog-more-button/catalog-more-button';
+export { default as Logo } from './logo/logo';
+export { default as UserBlock } from './user-block/user-block';
+export { default as Footer } from './footer/footer';
+export { default as PrivatRouter } from './privat-router/privat-router';
+export { default as Breadcrumbs } from './breadcrumbs/breadcrumbs';
+export { default as PageTitle } from './page-title/page-title';
