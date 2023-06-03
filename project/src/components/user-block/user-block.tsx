@@ -1,4 +1,4 @@
-import { isLogin } from 'const';
+import { AppRoute, isLogin } from 'const';
 import { Link } from 'react-router-dom';
 
 export default function UserBlock() {
@@ -7,7 +7,7 @@ export default function UserBlock() {
       <ul className="user-block">
         <li className="user-block__item">
           <div className="user-block__avatar">
-            <Link to='mylist'>
+            <Link to={AppRoute.MyList}>
               <img src="img/avatar.jpg" alt="User avatar" width="63" height="63" />
             </Link>
           </div>
@@ -20,7 +20,7 @@ export default function UserBlock() {
   }
   return(
     <div className="user-block">
-      <Link to='login' className="user-block__link">Sign in</Link>
+      <Link to={AppRoute.SingIn} className="user-block__link">Sign in</Link>
     </div>
   );
 }

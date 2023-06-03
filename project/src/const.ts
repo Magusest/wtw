@@ -1,5 +1,5 @@
 const isLogin = true;
-const MY_LIST_COUNT = 100;
+const MY_LIST_COUNT = 8;
 const {log} = console;
 
 enum AppRoute {

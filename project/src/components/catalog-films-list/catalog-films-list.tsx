@@ -1,29 +1,15 @@
 import { FilmCardSmall } from 'components';
+import { FilmListType } from 'types/films';
+
+type Props = {
+  films: FilmListType;
+}
 
 
-export default function CatalogFilmsList() {
+export default function CatalogFilmsList({films}: Props) {
   return(
     <div className="catalog__films-list">
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
-      <FilmCardSmall />
+      {films.map((film) => <FilmCardSmall film={film} key={film.id}/>)}
     </div>
   );
 }

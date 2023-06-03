@@ -1,9 +1,8 @@
-import { AppRoute, log } from 'const';
+import { AppRoute, MY_LIST_COUNT } from 'const';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function FilmCardButtons() {
   const location = useLocation();
-  log(location);
 
   return(
     <div className="film-card__buttons">
@@ -18,7 +17,7 @@ export default function FilmCardButtons() {
           <use xlinkHref="#add"></use>
         </svg>
         <span>My list</span>
-        <span className="film-card__count">9</span>
+        <span className="film-card__count">{MY_LIST_COUNT}</span>
       </button>
       {location.pathname === `/${AppRoute.Film}/1`
         ? <Link to={AppRoute.Review} className="btn film-card__button">Add review</Link>

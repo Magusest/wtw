@@ -1,14 +1,28 @@
-import { AppRoute } from 'const';
+import { AppRoute, log } from 'const';
+// import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FilmType } from 'types/film';
 
-export default function FilmCardSmall() {
+type Props = {
+  film: FilmType;
+}
+
+export default function FilmCardSmall({film}: Props) {
+  const { id,name, posterImage } = film;
+
+  // const [, setCardState] = useState();
+
+  const cardHoverHandler = () => {
+    log(id);
+  };
+
   return(
-    <article className="small-film-card catalog__films-card">
+    <article className="small-film-card catalog__films-card" onMouseEnter={cardHoverHandler}>
       <div className="small-film-card__image">
-        <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
+        <img src={posterImage} alt={name} width="280" height="175" />
       </div>
       <h3 className="small-film-card__title">
-        <Link className="small-film-card__link" to={`${AppRoute.Film}/1`}>Fantastic Beasts: The Crimes of Grindelwald</Link>
+        <Link className="small-film-card__link" to={`${AppRoute.Film}/${id}`}>{name}</Link>
       </h3>
     </article>
   );
